@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TechSmart | Innovative Smart Solutions</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface-container": "#e7eeff",
+                    "on-surface-variant": "#42474f",
+                    "surface-variant": "#d8e3fb",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#fed491",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#785a23",
+                    "primary": "#1b558b",
+                    "surface": "#f9f9ff",
+                    "tertiary": "#44546a",
+                    "primary-fixed": "#d2e4ff",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "secondary-fixed": "#ffdeac",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f9f9ff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "tertiary-container": "#5c6c83",
+                    "inverse-primary": "#9fcaff",
+                    "surface-container-highest": "#d8e3fb",
+                    "surface-tint": "#2b6197",
+                    "surface-container-high": "#dee8ff",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary": "#785923",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#001c37",
+                    "on-surface": "#111c2d",
+                    "secondary-fixed-dim": "#e9c080",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#9fcaff",
+                    "outline-variant": "#c2c7d1",
+                    "on-primary": "#ffffff",
+                    "outline": "#727780",
+                    "on-secondary-fixed": "#281900",
+                    "on-primary-container": "#e4eeff",
+                    "inverse-on-surface": "#ecf1ff",
+                    "on-secondary-fixed-variant": "#5d420c",
+                    "on-primary-fixed-variant": "#02497e",
+                    "on-background": "#111c2d",
+                    "primary-container": "#3a6ea5",
+                    "background": "#f9f9ff",
+                    "surface-dim": "#cfdaf2",
+                    "on-tertiary-container": "#e4edff",
+                    "inverse-surface": "#263143"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "xxl": "1rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-shadow {
+            box-shadow: 0 4px 12px rgba(58, 110, 165, 0.15);
+        }
+        .text-accent { color: #EEC584; }
+        .bg-accent { background-color: #EEC584; }
+        .border-accent { border-color: #EEC584; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-sm docked full-width top-0 sticky z-50">
+<div class="max-w-container-max mx-auto w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed text-headline-md" data-icon="api">api</span>
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">TechSmart</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-lg font-label-md hover:opacity-90 transition-all active:scale-95">
+                    Get a Quote
+                </button>
+<button class="text-on-surface-variant dark:text-surface-variant p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-12 pb-16 px-margin-mobile">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6 text-left">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm w-fit">
+                        TRUSTED TECH PARTNER
+                    </span>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg text-on-surface">
+                        Innovative <span class="text-primary">Smart Solutions</span> for Modern Businesses
+                    </h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                        Empowering enterprises with cutting-edge technology and intelligent systems designed to scale and optimize performance in a digital-first world.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-lg font-headline-md shadow-md hover:bg-secondary-fixed transition-all active:scale-95 text-center">
+                            Get Started
+                        </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-headline-md hover:bg-primary-fixed transition-all active:scale-95 text-center">
+                            Learn More
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xxl blur-2xl group-hover:bg-primary/10 transition-all duration-500"></div>
+<div class="relative rounded-xxl overflow-hidden premium-shadow bg-surface border border-outline-variant/30">
+<img alt="Abstract Technology Illustration" class="w-full aspect-video object-cover" data-alt="A sophisticated abstract technology illustration featuring glowing blue architectural data nodes and flowing golden light trails representing high-speed connectivity. The scene is set in a pristine digital environment with soft, ambient high-key lighting, maintaining a clean light-mode corporate aesthetic. The visual style is premium and futuristic, with a focus on depth, precision, and a calm, innovative mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp65K32vw1cBvaHCucz9lbn3fjfNX8As4e3On2mWUIZuEWvfoPiFVzWlbeIrIaXKBmYvmb2e6SnJdoVjLR_2uJLB1YcN_aZU7fWe7wXOnRYsRRV1beG_IQscNrCldnhZ_S_xJR08Y3kOkZ3Hbpy0oQ017Y7RPnfGNYUH0h1xmBccUJACgvSLuqJEg9Qb1eJN7t_WqKLrO2H7F9CWDNVl-gmLiiw4E-8GfOeqofYk7C6VkOgV7Y8_Upu5TBUVdHW_Xp98CeyzDjiEw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section -->
+<section class="py-12 border-y border-outline-variant/20 bg-surface/50 px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<p class="text-center text-label-sm text-on-surface-variant/60 uppercase tracking-[0.2em] mb-10">Trusted by Industry Leaders</p>
+<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale contrast-125">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl" data-icon="corporate_fare">corporate_fare</span>
+<span class="font-bold text-headline-md tracking-tighter">GlobalCorp</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl" data-icon="domain">domain</span>
+<span class="font-bold text-headline-md tracking-tighter">TechNexa</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl" data-icon="apartment">apartment</span>
+<span class="font-bold text-headline-md tracking-tighter">Starlight</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl" data-icon="location_city">location_city</span>
+<span class="font-bold text-headline-md tracking-tighter">OmniSystems</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl" data-icon="foundation">foundation</span>
+<span class="font-bold text-headline-md tracking-tighter">Vertex</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section (Stacked Cards) -->
+<section class="py-20 bg-surface-container-low px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">Why Businesses Choose TechSmart</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="bg-white p-10 rounded-xxl premium-shadow hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-xl bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="lightbulb">lightbulb</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-4 tracking-normal leading-tight">Innovation</h3>
+<p class="text-body-md text-on-surface-variant">We don't just follow trends; we set them. Our R&amp;D team ensures your business stays ahead of the competition with unique IP.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white p-10 rounded-xxl premium-shadow hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-xl bg-secondary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-4 tracking-normal leading-tight">Reliability</h3>
+<p class="text-body-md text-on-surface-variant">99.9% uptime and enterprise-grade security protocols are built into the DNA of every solution we provide.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white p-10 rounded-xxl premium-shadow hover:-translate-y-2 transition-transform duration-300">
+<div class="w-16 h-16 rounded-xl bg-tertiary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="trending_up">trending_up</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-4 tracking-normal leading-tight">Scalability</h3>
+<p class="text-body-md text-on-surface-variant">Built for growth. Our cloud-native architectures adapt to your traffic and data needs seamlessly as you expand.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="text-headline-lg font-headline-lg text-on-surface">Comprehensive Services</h2>
+<p class="text-body-md text-on-surface-variant mt-2">Tailored technical expertise for your unique operational challenges.</p>
+</div>
+<a class="text-primary font-label-md flex items-center gap-2 hover:underline group transition-all duration-300" href="#">
+                        View All Services <span class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group bg-white p-8 rounded-xl border border-outline-variant hover:border-primary hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 block transition-transform group-hover:scale-110" data-icon="code">code</span>
+<h4 class="text-headline-md font-headline-md text-on-surface group-hover:text-primary transition-colors">Software Development</h4>
+<p class="text-body-md text-on-surface-variant mt-3">Custom web and mobile applications built with the latest frameworks.</p>
+</div>
+<div class="group bg-white p-8 rounded-xl border border-outline-variant hover:border-primary hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined text-secondary text-3xl mb-4 block transition-transform group-hover:scale-110" data-icon="cloud_done">cloud_done</span>
+<h4 class="text-headline-md font-headline-md text-on-surface group-hover:text-secondary transition-colors">Cloud Solutions</h4>
+<p class="text-body-md text-on-surface-variant mt-3">Optimized migration, management, and security for hybrid cloud infrastructures.</p>
+</div>
+<div class="group bg-white p-8 rounded-xl border border-outline-variant hover:border-primary hover:shadow-lg transition-all duration-300 cursor-pointer active:scale-95">
+<span class="material-symbols-outlined text-primary text-3xl mb-4 block transition-transform group-hover:scale-110" data-icon="monitoring">monitoring</span>
+<h4 class="text-headline-md font-headline-md text-on-surface group-hover:text-primary transition-colors">IT Consulting</h4>
+<p class="text-body-md text-on-surface-variant mt-3">Strategic advisory services to align your technology with business goals.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-20 bg-background px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-12 text-center md:text-left">Success Stories</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative group rounded-xxl overflow-hidden h-[400px]">
+<img alt="Data Visualization Dashboard Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A clean, professional photo of a high-tech data visualization dashboard displayed on a large screen in a modern corporate command center. The lighting is soft and professional, with a color palette of deep navy and bright white accents. The image conveys high intelligence and precision, reflecting a premium technology-forward aesthetic suitable for an enterprise solution provider." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBycAmn6GDE7ZtTAMscc-Lv6ylLNO-YAc0l8PglGYZkp90sOJz2TnVWHhlCkQPDSLhqJJMs30nepZ7GzfQT_khzRP6vEoBs4RhjXuN_3xxiVJpIZ7nhJv1WLFX9su-TN7Hp8Lxp_Dzpouxs2cVTHvwz80CKgG1-IiJxrbcZcvPmdZSyva-b9Vgcyonn2GMgavg68oPtjEvShSBW6tm-Z7eOZztT6_PIIBpeTNOY9ySBB7OqtFtl9LOxnRQbp3RABWoqp2sFUP2GbMo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+<h4 class="text-headline-md text-white font-headline-md">FinTech Analytics Engine</h4>
+<p class="text-body-md text-white/80 mt-2 mb-4">Processing 1M+ transactions per second for Global Finance Inc.</p>
+<a class="inline-flex items-center gap-2 text-secondary-fixed font-label-md hover:text-white transition-all group/link" href="#">
+                                View Case Study <span class="material-symbols-outlined text-sm transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<div class="relative group rounded-xxl overflow-hidden h-[400px]">
+<img alt="Smart Manufacturing System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A high-quality wide shot of a futuristic smart manufacturing facility featuring automated robotic arms working on high-precision components. The atmosphere is clean and brightly lit with high-key corporate lighting. The scene uses a palette of metallic silver, primary blue, and warm golden highlights to represent the intersection of hardware and smart software. Professional, sleek, and high-performance feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPg2QnTOIISPTD-enTa0n1PL1WX_K14c4lUiHCh9cdh7NU8moQZQFip-fhEy-FozAY8na7JkVZZq7-3CItqRRMmIVcTlcgO6xnGKuZUdhpFoHo0KbPT9G-hiaa59pwk7SWHw2UKxyvmBZpObT4L51N-ameCXWr5AV6E367vn_Dibo_n9UUIWkNXe4M-DSnTAyRtAkILYyQrQWqSAS6tiniTrWSdtxSz9ciCC9jUxyUUNGo3NZxeubEo0VANtLxl7BUZ81F-t7Vk_w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-8 flex flex-col justify-end">
+<h4 class="text-headline-md text-white font-headline-md">Industrial IoT Platform</h4>
+<p class="text-body-md text-white/80 mt-2 mb-4">Smart factory automation for NexGen Manufacturing.</p>
+<a class="inline-flex items-center gap-2 text-secondary-fixed font-label-md hover:text-white transition-all group/link" href="#">
+                                View Case Study <span class="material-symbols-outlined text-sm transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics Banner -->
+<section class="py-16 bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-mobile flex flex-col md:flex-row justify-around items-center gap-12 text-center">
+<div class="flex flex-col gap-2">
+<span class="text-5xl font-bold">100+</span>
+<span class="text-label-md uppercase tracking-widest opacity-80">Global Clients</span>
+</div>
+<div class="h-12 w-px bg-white/20 hidden md:block"></div>
+<div class="flex flex-col gap-2">
+<span class="text-5xl font-bold">50+</span>
+<span class="text-label-md uppercase tracking-widest opacity-80">Projects Completed</span>
+</div>
+<div class="h-12 w-px bg-white/20 hidden md:block"></div>
+<div class="flex flex-col gap-2">
+<span class="text-5xl font-bold">15+</span>
+<span class="text-label-md uppercase tracking-widest opacity-80">Countries Reached</span>
+</div>
+<div class="h-12 w-px bg-white/20 hidden md:block"></div>
+<div class="flex flex-col gap-2">
+<span class="text-5xl font-bold">24/7</span>
+<span class="text-label-md uppercase tracking-widest opacity-80">Support Availability</span>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-24 bg-surface-container-low px-margin-mobile">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">What Our Clients Say</h2>
+<div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="flex flex-col gap-8 max-w-2xl mx-auto">
+<!-- Testimonial 1 -->
+<div class="bg-white p-8 rounded-xxl premium-shadow border border-outline-variant/30">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">David Chen</h4>
+<p class="text-label-sm text-on-surface-variant">CTO, Global Finance Inc.</p>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic">"The FinTech Analytics Engine TechSmart developed for us has revolutionized our real-time processing capabilities. Their technical precision is unmatched."</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-8 rounded-xxl premium-shadow border border-outline-variant/30">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="person">person</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Sarah Jenkins</h4>
+<p class="text-label-sm text-on-surface-variant">Head of Operations, NexGen Manufacturing</p>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic">"TechSmart's Industrial IoT platform allowed us to automate complex production lines with zero downtime during the transition. Truly professional partners."</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-8 rounded-xxl premium-shadow border border-outline-variant/30">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="person">person</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Thorne</h4>
+<p class="text-label-sm text-on-surface-variant">CEO, Starlight Enterprises</p>
+</div>
+</div>
+<p class="text-body-md text-on-surface-variant italic">"Scaling our cloud infrastructure was a daunting task until we met the TechSmart team. Their strategic consulting saved us months of trial and error."</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface text-surface-variant py-16 px-margin-mobile">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-surface-bright text-3xl" data-icon="api">api</span>
+<span class="text-headline-sm font-headline-sm font-bold text-surface-bright">TechSmart</span>
+</div>
+<p class="text-body-md opacity-70">
+                    Leading the charge in smart corporate solutions. Transforming the landscape of digital operations since 2012.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center hover:bg-secondary-fixed-dim transition-colors group" href="#">
+<span class="material-symbols-outlined text-surface-bright group-hover:text-on-secondary-fixed" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center hover:bg-secondary-fixed-dim transition-colors group" href="#">
+<span class="material-symbols-outlined text-surface-bright group-hover:text-on-secondary-fixed" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center hover:bg-secondary-fixed-dim transition-colors group" href="#">
+<span class="material-symbols-outlined text-surface-bright group-hover:text-on-secondary-fixed" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-surface-bright font-headline-md mb-6">Explore</h5>
+<ul class="flex flex-col gap-4 text-label-md">
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">Portfolio</a></li>
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-bright font-headline-md mb-6">Legal</h5>
+<ul class="flex flex-col gap-4 text-label-md">
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="hover:text-secondary-fixed-dim transition-colors" href="#">SLA Agreement</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-bright font-headline-md mb-6">Stay Updated</h5>
+<p class="text-body-md opacity-70 mb-4">Subscribe to our newsletter for insights on smart tech.</p>
+<form class="flex flex-col gap-3">
+<input class="bg-surface-variant/10 border border-white/20 rounded-lg p-3 text-white focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Email Address" type="email"/>
+<button class="bg-secondary text-white p-3 rounded-lg font-label-md hover:bg-secondary-fixed-dim transition-colors">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-label-sm opacity-60">
+<p>© 2024 TechSmart Solutions. All rights reserved.</p>
+<p>Designed for Excellence.</p>
+</div>
+</footer>
+<!-- FAB for Quick Contact -->
+<div class="fixed bottom-6 right-6 z-40">
+<button class="w-14 h-14 bg-secondary shadow-lg rounded-full flex items-center justify-center text-white active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+</body></html>
